@@ -1,0 +1,97 @@
+.edge-color {
+    position: relative;
+    color: #fff;
+    background: url(../assets/images/baba.png) no-repeat;
+    background-size: cover;
+    background-position: right bottom;
+
+    .color-header {
+        position: absolute;
+        left: 84px;
+        top: 115px;
+
+        @include tablets {
+            left: 15px;
+        }
+
+        @include phones {
+            font-size: 50px;
+            left: 5px;
+        }
+    }
+
+    .color-menu {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+
+        .color-menu_item {
+            display: flex;
+            list-style: none;
+
+            .color-menu_title {
+                position: relative;
+                width: 100px;
+
+                @include phones {
+                    width: 90px;
+                }
+
+                .color-menu_text {
+                    width: 102px;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    @include phones {
+                        width: 90px;
+                    }
+
+                    .color-menu_name {
+                        position: absolute;
+                        width: 600px;
+                        color:#fff;
+                        font-weight: 700;
+                        left: 25%;
+                        font-size: 36px;
+                        transform: rotate(-90deg);
+                        transform-origin: left top 0;
+                        bottom: 0;
+                    }
+                }
+                .gray-child {
+                    background-color: #999;
+                }
+                .black-child {
+                    background-color: #151515;
+                }
+                .red-child {
+                    background-color: #e01f3c;
+                }
+            }
+            
+            .color-menu_content {
+                position: relative;
+                width: 0;
+                overflow: hidden;
+                background: #333537;
+                opacity: 80%;
+
+                .color-menu_container {
+                    padding: 38px;
+                    height: 100%;
+                    font-size: 16px;
+                    width: 400;
+                    color: #fff;
+                    font-family: "Alegreya Sans", sans-serif;
+                }
+            }
+
+            
+        }
+
+    }
+
+}

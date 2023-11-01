@@ -1,0 +1,273 @@
+.edge-buying {
+    position: relative;
+    background-color: #f8faf9;
+    
+    .arrows {
+        display: flex;
+        align-items: center;
+
+        @include tablets {
+          position: relative;
+        }
+       
+
+            @include phones {
+              right: -10px;
+            }
+        }
+        .buying-sprite {
+            display: flex;
+            justify-content: flex-end;
+            height: 40px;
+            width: 27px;
+        }
+    }
+       
+    
+    .arrows_prev {
+        position: absolute;
+        left: 5%;
+        top: 50%;
+        z-index: 10000;
+
+        @include tablets {
+          left: 10%;
+          top: 35%;
+        }
+  }
+
+  .arrows_next {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+
+    @include tablets {
+      right: 12%;
+      top: 35%;
+    }
+}
+  
+  .buying {
+    li {
+      display: flex;
+
+      @include tablets {
+        flex-direction: column;
+      }
+    }
+  
+    .picture {
+      display: flex;
+      align-items: center;
+
+      @include tablets {
+        justify-content: center;
+      }
+
+      img {
+        @include tablets {
+          width: 306px;
+          height: 306px;
+        }
+      } 
+    }
+  
+    .square {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background-color: #9a9a9a;
+      height: 91px;
+      width: 91px;
+      border-radius: 4px;
+  
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 42px;
+        width: 42px;
+        background: url(../assets/images/gear.png) no-repeat;
+      }
+    }
+    .buying-main {
+        position: relative;
+        display: flex;
+        width: 91px;
+
+        @include tablets {
+          display: none;
+        }
+    
+        &:hover .dropdown {
+            opacity: 1;
+            left: 91px;
+        }
+
+        .dropdown {
+            left: -9999px;
+            position: absolute;
+            background: #fff;
+            border-radius: 4px;
+            opacity: 0;
+            transition: opacity .4s;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                padding: 28px 25px 34px 30px;
+
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    color: #000;
+                    padding-bottom: 28px;
+                    align-items: center;
+                    
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
+                    
+
+                    .dropdown-name {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                        .buying-dropmain {
+                            height: 25px;
+                            width: 24px;
+                        }
+                        p {
+                            padding-left: 16px;
+                            width: 127px;
+                            padding-right: 10px;
+                        }
+                    span {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+  
+    h2 {
+      text-transform: uppercase;
+      font-size: 36px;
+      font-weight: 700;
+      color: #292929;
+      padding-bottom: 24px;
+      padding-top: 25px;
+      letter-spacing: 0;
+
+      @include tablets {
+        font-size: 27px;
+        text-align: center;
+      }
+    }
+  
+    article {
+      font-size: 16px;
+      font-weight: 400;
+      color: #666;
+      padding-bottom: 30px;
+      padding-right: 20px;
+
+      @include tablets {
+        font-size: 15px;
+        padding-right: 0;
+        text-align: center;
+      }
+    }
+  
+    .outline {
+
+      display: flex;
+      flex-direction: row;
+
+      @include tablets {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      
+
+      .outline_item {
+        padding-right: 86px;
+        display: flex;
+        flex-direction: column;
+  
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+  
+      title {
+        font-size: 16px;
+        font-weight: 400;
+        color: #666;
+      }
+  
+      .value {
+        font-size: 18px;
+        font-weight: 700;
+        color: #000;
+        padding-top: 4px;
+      }
+    }
+  
+    .total {
+      padding-top: 24px;
+
+      @include tablets {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+  
+      li {
+        display: flex;
+        align-items: center;
+      }
+  
+      .amount {
+        text-transform: uppercase;
+        font-size: 36px;
+        font-weight: 400;
+        color: #151515;
+        padding-right: 22px;
+        padding-bottom: 30px;
+      }
+  
+      a {
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 18px 36px;
+        border-radius: 100px;
+        background-color: #e01f3d;
+      }
+    }
+  }
+
+  .buying-slider {
+    flex: 1;
+  }
+
+  .bx-wrapper {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    margin-bottom: 0;
+
+    img {
+      top: 8%;
+      position: relative;
+    }
+  }
+
+  .buying-link {
+    margin-bottom: 20px;
+  }
